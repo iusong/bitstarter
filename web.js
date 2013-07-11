@@ -8,7 +8,7 @@ app.get('/', function(request, response) {
   var fs = require('fs');
   var output = fs.readFileSync("./index.html");
   var buf = new Buffer(output.length);
-  var n = buf.write(output,"utf-8");
+  buf.write(output,"utf-8");
   response.send(buf.toString('utf-8'));
 //  response.send(output);
 //  response.send("hellow");

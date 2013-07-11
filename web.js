@@ -1,12 +1,12 @@
-var fs = (require 'fs');
+//var fs = (require 'fs');
 var express = require('express');
 
 var app = express.createServer(express.logger());
 
-var output = fs.readFileSync("./index.html");
+//var output = fs.readFileSync("./index.html");
 app.get('/', function(request, response) {
-  var buf = new Buffer(output.length);
-  buf.write(output,"utf-8");
+//  var buf = new Buffer(output.length);
+//  buf.write(output,"utf-8");
 //  response.send(buf.toString('utf-8'));
 //  response.send(output);
 response.send("hellow");
